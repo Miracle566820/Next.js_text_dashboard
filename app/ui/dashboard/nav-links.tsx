@@ -17,10 +17,10 @@ const links = [
   { name: 'Home', href: '/dashboard/board/', icon: HomeIcon },
   {
     name: 'Invoices',
-    href: '#',
+    href: '/dashboard/invoices/',
     icon: DocumentDuplicateIcon,
   },
-  { name: 'Customers', href: '#', icon: UserGroupIcon },
+  { name: 'Profile', href: '/dashboard/profile/', icon: UserGroupIcon },
 ];
 
 export default function NavLinks() {
