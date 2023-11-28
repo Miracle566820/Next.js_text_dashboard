@@ -11,6 +11,7 @@ import {
 } from '@/app/lib/data';
 // import { HistoryTab } from '@/app/ui/mycomp/history';
 import { History, Topic } from '@/app/ui/mycomp/history';
+import { record } from 'zod';
 
 export default async function Page() {
   const revenue = await fetchRevenue();
@@ -44,23 +45,26 @@ export default async function Page() {
           <Search placeholder="Search invoices..." />
         </div>
       </div>
-      <div className="flex gap-8">
-        <div className="flex-1">
-          <div className="mb-6 pt-10 pb-10 pl-3 pr-3">
-            <h1 className={`text-lg md:text-xl text-center text-violet-800`}>
-                You have conducted 100 researchers in the last 7 days
-            </h1>
-            <h1 className={`text-lg md:text-xl text-center text-violet-800`}>
-                and 300 researchers in the last 30 days.
-            </h1>
-          </div>
-
-          <RevenueChart revenue={revenue} />
+      <div className="mt-10 pl-10 mb-5 ml-10">
+        <h1 className="text-slate-500 text-lg md:text-xl">
+          Download
+        </h1>
+      </div>
+      <div className="flex bg-violet-900">
+      <div className="flex-initial ml-10 mt-12">
+        <div className="bg-slate-200 p-6 m-5">
         </div>
-
-        <div className="... sm:w-56 md:w-56 lg:w-72 xl:w-84">
-          <History />
-          <Topic />
+        <div className="bg-slate-200 p-6 m-5">
+        </div>
+        <div className="bg-slate-200 p-6 m-5">
+        </div>
+        <div className="bg-slate-200 p-6 m-5">
+        </div>
+      </div>
+        <div className="flex-1">
+          <h1 className="text-slate-200 px-20 py-60 text-xl md:text-2xl text-left">
+              list saved artical liset and with select item to download function
+          </h1>
         </div>
       </div>
     </main>

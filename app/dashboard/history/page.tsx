@@ -11,6 +11,7 @@ import {
 } from '@/app/lib/data';
 // import { HistoryTab } from '@/app/ui/mycomp/history';
 import { History, Topic } from '@/app/ui/mycomp/history';
+import { record } from 'zod';
 
 export default async function Page() {
   const revenue = await fetchRevenue();
@@ -44,24 +45,10 @@ export default async function Page() {
           <Search placeholder="Search invoices..." />
         </div>
       </div>
-      <div className="flex gap-8">
-        <div className="flex-1">
-          <div className="mb-6 pt-10 pb-10 pl-3 pr-3">
-            <h1 className={`text-lg md:text-xl text-center text-violet-800`}>
-                You have conducted 100 researchers in the last 7 days
-            </h1>
-            <h1 className={`text-lg md:text-xl text-center text-violet-800`}>
-                and 300 researchers in the last 30 days.
-            </h1>
-          </div>
-
-          <RevenueChart revenue={revenue} />
-        </div>
-
-        <div className="... sm:w-56 md:w-56 lg:w-72 xl:w-84">
-          <History />
-          <Topic />
-        </div>
+      <div className=" mt-20 bg-violet-900">
+      <h1 className="text-slate-200 px-20 py-60 text-xl md:text-2xl text-center">
+          list historical research record with time stamp
+      </h1>
       </div>
     </main>
   );
